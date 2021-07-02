@@ -1,14 +1,14 @@
 package watch
 
 import (
-	"github.com/hashicorp/consul-template/template"
+	"github.com/sumup/consul-template/template"
 	"log"
 	"os"
 	"sync"
 	"time"
 
-	dep "github.com/hashicorp/consul-template/dependency"
 	"github.com/pkg/errors"
+	dep "github.com/sumup/consul-template/dependency"
 )
 
 // dataBufferSize is the default number of views to process in a batch.

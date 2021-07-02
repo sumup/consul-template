@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	dep "github.com/hashicorp/consul-template/dependency"
+	dep "github.com/sumup/consul-template/dependency"
 )
 
 // View is a representation of a Dependency and the most recent data it has

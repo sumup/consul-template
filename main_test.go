@@ -7,9 +7,9 @@ import (
 	"os"
 	"testing"
 
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/test"
 	"github.com/hashicorp/consul/sdk/testutil"
+	dep "github.com/sumup/consul-template/dependency"
+	"github.com/sumup/consul-template/test"
 )
 
 var testConsul *testutil.TestServer

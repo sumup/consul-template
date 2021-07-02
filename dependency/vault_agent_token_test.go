@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/consul-template/renderer"
 	"github.com/stretchr/testify/assert"
+	"github.com/sumup/consul-template/renderer"
 )
 
 func TestVaultAgentTokenQuery_Fetch(t *testing.T) {

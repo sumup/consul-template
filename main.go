@@ -1,7 +1,7 @@
-package main // import "github.com/hashicorp/consul-template"
+package main // import "github.com/sumup/consul-template"
 
 import (
-	"github.com/hashicorp/consul-template/cli"
+	"github.com/sumup/consul-template/cli"
 	"os"
 )
 

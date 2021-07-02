@@ -22,10 +22,10 @@ import (
 
 	"github.com/BurntSushi/toml"
 	spewLib "github.com/davecgh/go-spew/spew"
-	dep "github.com/hashicorp/consul-template/dependency"
 	"github.com/hashicorp/consul/api"
 	socktmpl "github.com/hashicorp/go-sockaddr/template"
 	"github.com/pkg/errors"
+	dep "github.com/sumup/consul-template/dependency"
 	yaml "gopkg.in/yaml.v2"
 )
 

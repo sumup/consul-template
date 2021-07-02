@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"testing"
 
-	dep "github.com/hashicorp/consul-template/dependency"
+	dep "github.com/sumup/consul-template/dependency"
 )
 
 // NOTE: the template functions are all tested in ./template_test.go and

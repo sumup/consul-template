@@ -3,7 +3,7 @@ package config
 import (
 	"fmt"
 
-	"github.com/hashicorp/consul-template/version"
+	"github.com/sumup/consul-template/version"
 )
 
 const (

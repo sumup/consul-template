@@ -7,11 +7,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/template"
-	"github.com/hashicorp/consul-template/test"
 	"github.com/hashicorp/consul/sdk/testutil"
+	"github.com/sumup/consul-template/config"
+	dep "github.com/sumup/consul-template/dependency"
+	"github.com/sumup/consul-template/template"
+	"github.com/sumup/consul-template/test"
 )
 
 var testConsul *testutil.TestServer
