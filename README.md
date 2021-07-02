@@ -1,6 +1,6 @@
 # Consul Template
 
-**This is a fork modified to support AWS SSM Parameter & AWS Secrets Manager seemlessly**.
+**This is a fork modified to support AWS SSM Parameter Store & AWS Secrets Manager seemlessly**.
 
 For the official README of hashicorp/consul-template check https://github.com/hashicorp/consul-template.
 
