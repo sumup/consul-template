@@ -162,7 +162,7 @@ func fileFunc(b *Brain, used, missing *dep.Set, sandboxPath string) func(string)
 	}
 }
 
-func getKVQueryForKeyStrategy(s string) (dep.Dependency, error) {
+func getKVQueryForKeyStrategy(s string, enableBlocking bool) (dep.Dependency, error) {
 	keyStrategy := os.Getenv("CONSUL_TEMPLATE_KEY_STRATEGY")
 
 	if keyStrategy == KeyStrategyAwsSsmParameterStore {
@@ -170,7 +170,10 @@ func getKVQueryForKeyStrategy(s string) (dep.Dependency, error) {
 		if err != nil {
 			return q, err
 		}
-		q.EnableBlocking()
+
+		if enableBlocking {
+			q.EnableBlocking()
+		}
 
 		return q, nil
 	}
@@ -179,7 +182,10 @@ func getKVQueryForKeyStrategy(s string) (dep.Dependency, error) {
 	if err != nil {
 		return nil, err
 	}
-	q.EnableBlocking()
+
+	if enableBlocking {
+		q.EnableBlocking()
+	}
 
 	return q, nil
 }
@@ -191,7 +197,7 @@ func keyFunc(b *Brain, used, missing *dep.Set) func(string) (string, error) {
 			return "", nil
 		}
 
-		d, err := getKVQueryForKeyStrategy(s)
+		d, err := getKVQueryForKeyStrategy(s, true)
 		if err != nil {
 			return "", err
 		}
@@ -218,7 +224,7 @@ func keyExistsFunc(b *Brain, used, missing *dep.Set) func(string) (bool, error) 
 			return false, nil
 		}
 
-		d, err := getKVQueryForKeyStrategy(s)
+		d, err := getKVQueryForKeyStrategy(s, false)
 		if err != nil {
 			return false, err
 		}
@@ -243,7 +249,7 @@ func keyWithDefaultFunc(b *Brain, used, missing *dep.Set) func(string, string) (
 			return def, nil
 		}
 
-		d, err := getKVQueryForKeyStrategy(s)
+		d, err := getKVQueryForKeyStrategy(s, false)
 		if err != nil {
 			return "", err
 		}
